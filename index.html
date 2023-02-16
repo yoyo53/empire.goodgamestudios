@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Empire HTML5</title>
+    <link rel="shortcut icon" href="https://media.goodgamestudios.com/www/favicon_12.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="https://empire-html5.goodgamestudios.com/default/style.bundle.3a2dafbd.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- load facebook sdk directly, the FB.init will be called inside FacebookModule -->
+    <script>
+        /**
+         * The function assigned to window.fbAsyncInit is run as soon as the SDK has completed loading.
+         * Any code that you want to run after the SDK is loaded should be placed within this function and after the call to FB.init.
+         * Any kind of JavaScript can be used here, but any SDK functions must be called after FB.init.
+         */
+        window.fbAsyncInit = function() {
+            // Facebook SDK was loaded
+            window.fbSdkLoaded = true;
+
+            // Don't call FB.init here, it will be called later by CastleFacebookModule
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- The following script is generated from config/patch-inline.js -->
+    <script>
+        !function(e){if(e&&e.prototype&&null==e.prototype.children&&Object.defineProperty(e.prototype,"children",{get:function(){for(var e,t=0,o=this.childNodes,r=[];e=o[t++];)1===e.nodeType&&r.push(e);return r.item=function(e){return r[e]},r}}),e&&e.prototype&&!e.prototype.remove){e.prototype.remove||(e.prototype.remove=function remove(){this.parentNode&&this.parentNode.removeChild(this)})}}(window.Node||window.Element),function(){var e=window.navigator.userAgent;function polyfill(e){var t=document.createElement("script");t.type="text/javascript",t.src=e,document.head.appendChild(t)}function polyfillProxy(){polyfill("proxy.min.js")}function polyfillES6(){polyfill("https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.6/shim.min.js")}if(/msie|trident/i.test(e))polyfillES6(),polyfillProxy();else if(/chrome|crios|crmo/i.test(e)){var t=e.match(/(?:chrome|crios|crmo)\/(\d+(\.\d+)?)/i);(parseInt(t&&t.length>1&&t[1])||0)<49&&(polyfillES6(),polyfillProxy())}Object.defineProperty(HTMLMediaElement.prototype,"isPlaying",{get:function(){return!!(this.currentTime>0&&!this.paused&&!this.ended&&this.readyState>2)}})}(),window.setLoadingScreenProgress=function(e){let t=document.getElementById("progress");t&&(t.style.width=e+"%",document.getElementById("progress-bar-text").innerText=e+" %")},window.setLoadingScreenProgress(13);
+//# sourceMappingURL=patch.bundle.e9daf101.js.map
+    </script>
+
+    <!-- Start preload resources in HTML load-->
+    <link id="vendor" rel="preload" href="https://empire-html5.goodgamestudios.com/default/vendor.bundle.076a6baf.js" as="script">
+    <link id="dll" rel="preload" href="ggs.dll.8836c652035c789a56a0.js" as="script">
+    <link id="Loader" rel="preload" href="https://empire-html5.goodgamestudios.com/default/CastleLoader.bundle.d3f37c86d490c9fc650d.js" as="script">
+    <link id="CacheBreaker" rel="preload" href="CacheBreaker.bundle.2d15b15ffea62a6a936b.js" as="script">
+    <link id="Game" rel="preload" href="https://empire-html5.goodgamestudios.com/default/Game.bundle.9ce7f9f7c43bb0a4c0ee.js" as="script">
+    <!-- End preload resources in HTML load-->
+</head>
+<body>
+    <video muted loop id="startScreenVideo"></video>
+    <div id="edgeStartscreenVideoReplacement"></div>
+    <canvas id="CastleBG" style="position: absolute;"></canvas>
+    <canvas id="CastleStatic" style="position: absolute;"></canvas>
+    <canvas id="Castle" style="position: absolute"></canvas>
+    <canvas id="CastleUI" style="position: absolute;"></canvas>
+    <canvas id="CastleTutorial" style="position: absolute; pointer-events: none"></canvas>
+    <div id="naviCursorContainer" style="display:none; pointer-events: none;">
+        <canvas id="naviCircle"></canvas>
+        <canvas id="naviArrow"></canvas>
+        <canvas id="naviCursor"></canvas>
+        <input type="text" id="naviTxt" disabled>
+    </div>
+    <video controlsList="noplaybackrate nodownload" disablePictureInPicture="true" id="cinematics"></video>
+    <div id="loading">
+        <div><img src="https://empire-html5.goodgamestudios.com/default/logo.png" /></div>
+        <div id="rotator"></div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+            <div id="progress-bar-text">5 %</div>
+        </div>
+    </div>
+    <a href="#" class="close" id="close">
+    <script type="text/javascript" src="https://empire-html5.goodgamestudios.com/default/vendor.bundle.076a6baf.js"></script>
+    <script type="text/javascript" src="ggs.dll.8836c652035c789a56a0.js"></script>
+    <script type="text/javascript" src="https://empire-html5.goodgamestudios.com/default/CastleLoader.bundle.d3f37c86d490c9fc650d.js"></script>
+</body>
+</html>
